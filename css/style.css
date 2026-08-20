@@ -44,7 +44,8 @@ body {
 
 /* pc 에서 숨기기 */
 .ham-btn,
-.close-btn {
+.m-header,
+.m-gnb-list {
     display: none;
 }
 
@@ -1042,11 +1043,12 @@ focus-within: 자신뿐 아니라 후손한테 */
 
     #main-nav {
         position: fixed;
-        right: 0%;
-        background: #fff;
+        right: -100%;
+        background: rgba(255,255,255,0.5);
         width: 100%;
+        height:100vh;
         top:0;
-        padding:1.5em;
+        padding:1em 1.5em;
     }
 
     .main-menu {
@@ -1057,6 +1059,23 @@ focus-within: 자신뿐 아니라 후손한테 */
         padding:1em 0;
         border-bottom:1px solid var(--Neutral-300);
         color:var(--Neutral-900);
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .main-menu>li>a::after {
+        content: "\E800";
+        font-family:"fontello";
+        font-size:0.7em;
+        
+        /* width:24px; */
+        /* height:24px; */
+    }
+
+    .main-menu>li:hover>a::after,
+    .main-menu>li.active>a::after{
+        content:"\e802";
     }
 
     .depth2 {
@@ -1068,21 +1087,51 @@ focus-within: 자신뿐 아니라 후손한테 */
     .depth2>li{
         width:100%;
     }
+
     .main-menu>li:hover .depth2{
         display:block;
     }
 
+    .depth3{
+        display:none;
+        text-indent:4em;
+    }
+
     /* 보여주기 */
-    .ham-btn,.close-btn {
+    .ham-btn {
         display: block;
         width: 32px;
         
 
     }
+    .m-header,
+    .m-gnb-list {
+        display:flex;
+        justify-content:space-between;
+        color:var(--Neutral-900);
+
+    }
+    .m-header .m-logo img{
+        filter:invert(1);
+        width:100px;
+    }
+
 
     .close-btn .icon-x{
         color:#000;
         font-size:2em;
+    }
+
+    .m-gnb-list {
+    }
+    .m-gnb-list>li>a {
+        display:flex;
+        gap:0.5em;
+        align-items:center;
+    }
+    .m-gnb-list>li>a img {
+        width:2em;
+
     }
 
     /* header main-menu */
@@ -1154,7 +1203,7 @@ focus-within: 자신뿐 아니라 후손한테 */
     }
 
     .main-slider-list>li .img-box {
-        height: 60vh;
+        height: 100vh;
     }
 
     .main-slider-list>li .img-box img {
