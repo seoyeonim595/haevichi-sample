@@ -34,7 +34,7 @@
                         <h1 class="m-logo"><a href="#"><img src="./jeju_img/img_logo.png" alt=""></a></h1>
                         <p class="re-right"><button class="btn btn-pri">예약하기</button></p>
                     </div>
-                    
+
                     <ul class="main-menu">
                         <li>
                             <a href="#">스페셜오퍼</a>
@@ -194,7 +194,7 @@
                             <a href="#">멤버십</a>
                         </li>
                     </ul>
-                    
+
                     <!-- div.m-gnb-list>li*3>a[href="#]>img+span -->
                     <div class="m-gnb-list">
                         <li><a href="#"><img src="./Icon/person.svg" alt=""><span>로그인</span></a></li>
@@ -228,7 +228,7 @@
     <hr>
 
     <!-- 2. main -->
-    <main id="main">
+    <main>
         <div class="main-slider-wrap">
             <div class="main-slider swiper">
                 <ul class="main-slider-list swiper-wrapper">
@@ -371,7 +371,7 @@
             </div>
         </div>
         <hr>
-        <section class="offer-wrap">
+        <section class="offer-wrap" id="main">
             <div class="inner">
                 <div class="title-box" data-aos="fade-right">
                     <h2 class="section-title">OFFER</h2>
@@ -461,15 +461,19 @@
                     <li class="active"><a href="#">Hotel</a> </li>
                     <li> <a href="#">Resort</a> </li>
                 </ul> -->
-                <div class="roomtabs">
-                    <ul role="tablist" aria-label="객실 유형">
+                <div class="room-tabs">
+                    <ul role="tablist" aria-label="객실 유형" class="room-tab-menu tab-menu">
                         <li role="presentation" class="active">
-                            <button type="button" role="tab" aria-controls="hotel panel">Hotel</button>
+                            <button type="button" role="tab" id="hotel-t" aria-controls="hotel panel">
+                                Hotel
+                            </button>
                         </li>
 
                         <li role="presentation">
                             <button type="button" role="tab" id="resort-tab" aria-selected="false"
-                                aria-controls="resort-panel" tabindex="-1">Resort</button>
+                                aria-controls="resort-panel" tabindex="-1">
+                                Resort
+                            </button>
                         </li>
                     </ul>
                 </div>
@@ -483,7 +487,6 @@
                             </div>
                             <div class="text-box inner">
                                 <div class="left">
-
                                     <h3>Honors G Space</h3>
                                     <p>제네시스의 정체성과 제주의 자연을 담아 차별화된 라이프스타일을 <br>경험하는 공간입니다.</p>
                                     <div>
@@ -726,10 +729,10 @@
                     </div>
                 </div>
                 <ul class="tab-menu">
-                    <li class="active"><a href="#">Spa & Fitness</a></li>
-                    <li><a href="#">Convenience</a></li>
-                    <li><a href="#">Kids</a></li>
-                    <li><a href="#">Gallery</a></li>
+                    <li class="active"><button>Spa & Fitness</button></li>
+                    <li><button>Convenience</button></li>
+                    <li><button>Kids</button></li>
+                    <li><button>Gallery</button></li>
                 </ul>
                 <div class="facility-list-wrap">
                     <div class="spa-fitness active">
@@ -858,8 +861,8 @@
                     </div>
                 </div>
                 <ul class="tab-menu">
-                    <li class="active"><a href="#">Service</a></li>
-                    <li><a href="#">Contacts</a></li>
+                    <li class="active"><button>Service</button></li>
+                    <li><button>Contacts</button></li>
                 </ul>
                 <div class="concierge-list-wrap">
                     <div class="service on">
@@ -1034,7 +1037,7 @@
             // centeredSlides: true,
 
             breakpoints: {
-                
+
                 768: {
                     // slidesPerView: 2.4,
                     spaceBetween: 16,
@@ -1043,7 +1046,7 @@
                 1279: {
                     // slidesPerView: 2.4,
                     spaceBetween: 24,
-                    centeredSlides:true,
+                    centeredSlides: true,
 
                 },
             },

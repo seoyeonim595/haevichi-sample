@@ -284,7 +284,7 @@ header:hover .lang-btn>a::after {
     left: 50%;
     bottom: 250px;
     color: #fff;
-    background-color: rgba(0, 0, 255, 255, 0.2);
+    /* background-color: rgba(0, 0, 255, 255, 0.2); */
     width: 1440px;
     transform: translateX(-50%);
 }
@@ -306,7 +306,7 @@ header:hover .lang-btn>a::after {
 .main-slider-list>li .text-box>.main-slider-more>a {
     display: inline-block;
     border: 1px solid #fff;
-    /* padding: 8px 12px; */
+    padding: 8px 12px;
     /* padding:12px 52px 12px 20px; */
     font-size: 14px;
     /* position:relative; */
@@ -317,18 +317,18 @@ header:hover .lang-btn>a::after {
     color: #fff;
 }
 
-/* .main-slider-list>li .text-box>.main-slider-more>a::after {
+.main-slider-list>li .text-box>.main-slider-more>a::after {
     content: "";
     display: block;
     width: 24px;
     height: 24px;
     background: url(../Icon/arrow-white.png);
      
-    position:absolute;
+    /* position:absolute;
     top: 50%;
     right:16px;
-    transform: translateY(-50%);
-} */
+    transform: translateY(-50%); */
+}
 
 .main-slider-list>li .img-box>img {
     width: 100%;
@@ -349,6 +349,7 @@ header:hover .lang-btn>a::after {
     display: flex;
     padding: 20px 32px;
     justify-content: space-between;
+    padding: 20px 32px;
 }
 
 /* 자식요소 옆으로 붙이기 간격 48px */
@@ -443,15 +444,26 @@ section {
     margin-bottom: 1.5em;
 }
 
-.tab-menu>li>a {
+/* .tab-menu>li>button {
     color: var(--Neutral-500);
     font-weight: 300;
     font-size: 1.13em;
 }
 
-.tab-menu>.active>a {
+.tab-menu>.active>button {
     color: var(--Neutral-900);
     font-weight: 500;
+} */
+
+.tab-menu>li>button{
+    color:var(--Neutral-500);
+    font-weight:300;
+    font-size:1.13em;
+}
+
+.tab-menu>.active>button{
+    color:var(--Neutral-900);
+    font-weight:500;
 }
 
 .btn>a {
@@ -506,7 +518,7 @@ section {
 }
 
 .more-btn>a {
-    color: var(--Primary-color);
+    /* color: var(--Primary-color); */
     display: flex;
     gap: 4px;
 }
@@ -515,7 +527,7 @@ section {
     content: "";
     display: block;
     width: 8px;
-    height: 18px;
+    height: 19px;
     background: url(../Icon/arrow-more.png);
 
 }
@@ -564,7 +576,8 @@ section {
     transition: 0.5s;
 }
 
-.offer-list>li:hover .img-box>.img-bg {
+.offer-list>li:hover .img-box>.img-bg,
+.offer-list>li:focus-within .img-box>.imb-bg {
     opacity: 1;
 
 }
@@ -592,7 +605,7 @@ section {
     margin: 12px 0;
     display: flex;
     font-size: 0.88em;
-    gap: 7px;
+    gap: 12px;
 }
 
 .offer-list>li .text-box>.offer-kind>span {
@@ -628,10 +641,6 @@ section {
 
 }
 
-.offer-list>li:hover .img-box>.img-bg,
-.offer-list>li:focus-within .imgbox>.img-bg {
-    opacity: 1;
-}
 
 /* rooms */
 /* .room-type-wrap{} */
@@ -871,6 +880,7 @@ section {
 .membership-wrap {
     background: #C5DFF4;
     padding: 60px 0;
+    margin-top:10em;
 
 
 }
@@ -1012,7 +1022,8 @@ focus-within: 자신뿐 아니라 후손한테 */
 @media screen and (max-width:1440px) {
     .main-slider-list>li .text-box {
         width: 100%;
-        bottom: 50%;
+        bottom: 10%;
+        padding:1em;
     }
 
     .reservation-wrap {
@@ -1029,7 +1040,7 @@ focus-within: 자신뿐 아니라 후손한테 */
     }
 
     .header-inner {
-        padding: 1em 0;
+        padding: 1em;
     }
 
     .header-inner>div {
@@ -1044,7 +1055,7 @@ focus-within: 자신뿐 아니라 후손한테 */
     #main-nav {
         position: fixed;
         right: -100%;
-        background: rgba(255,255,255,0.5);
+        background: rgba(255,255,255,0.8);
         width: 100%;
         height:100vh;
         top:0;
@@ -1112,7 +1123,7 @@ focus-within: 자신뿐 아니라 후손한테 */
 
     }
     .m-header .m-logo img{
-        filter:invert(1);
+        filter:invert();
         width:100px;
     }
 
@@ -1123,7 +1134,9 @@ focus-within: 자신뿐 아니라 후손한테 */
     }
 
     .m-gnb-list {
+        margin-top:2em;
     }
+
     .m-gnb-list>li>a {
         display:flex;
         gap:0.5em;
@@ -1131,7 +1144,6 @@ focus-within: 자신뿐 아니라 후손한테 */
     }
     .m-gnb-list>li>a img {
         width:2em;
-
     }
 
     /* header main-menu */
@@ -1284,7 +1296,7 @@ focus-within: 자신뿐 아니라 후손한테 */
 
     /* .offer */
     .offer-list>li {
-        flex: 0 0 cal((100% - 1em) / 2);
+        flex: 0 0 calc((100% - 1em) / 2)
     }
 
     .room-type-wrap>div>ul .text-box .right {
@@ -1298,6 +1310,10 @@ focus-within: 자신뿐 아니라 후손한테 */
     /* footer */
     footer {
         padding: 2em 0;
+    }
+
+    .footer-logo{
+        width:100px;
     }
 
     .footer-menu {
